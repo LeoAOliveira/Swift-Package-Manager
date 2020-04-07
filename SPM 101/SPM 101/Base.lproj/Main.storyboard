@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SPM_101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGa-XJ-Ixp">
+                                <rect key="frame" x="0.0" y="119" width="414" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="myW-ED-88y">
+                                <rect key="frame" x="40" y="210" width="334" height="494"/>
+                                <color key="backgroundColor" red="0.97449202353206754" green="0.96978433259713004" blue="0.97919971446700504" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UV-mU-if7">
+                                <rect key="frame" x="40" y="754" width="334" height="33"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <state key="normal" title="Evaluate"/>
+                                <connections>
+                                    <action selector="evaluateButtomPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zlU-hm-N8D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="myW-ED-88y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="02q-Sw-eZv"/>
+                            <constraint firstItem="TGa-XJ-Ixp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="6kb-Tf-d6n"/>
+                            <constraint firstItem="TGa-XJ-Ixp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="81G-dk-dTm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="myW-ED-88y" secondAttribute="trailing" constant="40" id="HGh-j2-ScB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGa-XJ-Ixp" secondAttribute="trailing" id="Hxj-d2-RwM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2UV-mU-if7" secondAttribute="bottom" constant="75" id="TYA-RD-vYd"/>
+                            <constraint firstItem="2UV-mU-if7" firstAttribute="top" secondItem="myW-ED-88y" secondAttribute="bottom" constant="50" id="VW2-ck-13c"/>
+                            <constraint firstItem="2UV-mU-if7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gsU-eA-fC4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2UV-mU-if7" secondAttribute="trailing" constant="40" id="lKR-xT-l84"/>
+                            <constraint firstItem="myW-ED-88y" firstAttribute="top" secondItem="TGa-XJ-Ixp" secondAttribute="bottom" constant="50" id="vWg-d0-NJe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="myW-ED-88y" id="rte-jo-0zh"/>
+                        <segue destination="lHN-dU-o5x" kind="show" identifier="segue" id="lQw-2a-Q3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Response View Controller-->
+        <scene sceneID="sZz-Ul-F9D">
+            <objects>
+                <viewController id="lHN-dU-o5x" customClass="ResponseViewController" customModule="SPM_101" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S6I-a5-y0J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTT-UG-5PW">
+                                <rect key="frame" x="0.0" y="65" width="414" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reflection" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSG-Mg-WOK">
+                                <rect key="frame" x="40" y="404.5" width="334" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gSG-Mg-WOK" firstAttribute="leading" secondItem="KJ7-B4-uc1" secondAttribute="leading" constant="40" id="3vx-hs-yrA"/>
+                            <constraint firstItem="JTT-UG-5PW" firstAttribute="top" secondItem="KJ7-B4-uc1" secondAttribute="top" constant="65" id="4OL-su-lmR"/>
+                            <constraint firstItem="gSG-Mg-WOK" firstAttribute="centerY" secondItem="S6I-a5-y0J" secondAttribute="centerY" id="aVL-Kz-cnh"/>
+                            <constraint firstItem="JTT-UG-5PW" firstAttribute="trailing" secondItem="KJ7-B4-uc1" secondAttribute="trailing" id="dat-uu-8AE"/>
+                            <constraint firstItem="KJ7-B4-uc1" firstAttribute="trailing" secondItem="gSG-Mg-WOK" secondAttribute="trailing" constant="40" id="jMc-mH-uyz"/>
+                            <constraint firstItem="JTT-UG-5PW" firstAttribute="leading" secondItem="KJ7-B4-uc1" secondAttribute="leading" id="l14-HN-dMR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KJ7-B4-uc1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="D5i-zy-qtd"/>
+                    <connections>
+                        <outlet property="responseLabel" destination="gSG-Mg-WOK" id="2i2-BZ-csd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ne-jF-hrh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
